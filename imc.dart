@@ -1,5 +1,3 @@
-import 'dart:ffi';
-import 'dart:html';
 import 'dart:io';
 
 main() {
@@ -7,18 +5,23 @@ main() {
 imput de peso
 realizar calculo do imc
 output de imc*/
+  calculoImc();
 }
 
-CalculoImc() {
+calculoImc() {
   print("Informe seu Peso: ");
   String? textPeso = stdin.readLineSync();
   int peso = int.parse(textPeso!);
   print("Informe sua altura: ");
   String? textAlt = stdin.readLineSync();
   double altura = double.parse(textAlt!);
-  double calc = peso / (altura * altura);
 
+  double calc = calculo(peso, altura);
   imprimirResultado(calc);
+}
+
+double calculo(int peso, double altura) {
+  return peso / (altura * altura);
 }
 
 imprimirResultado(double calc) {
