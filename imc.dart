@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:html';
 import 'dart:io';
 
@@ -10,17 +11,17 @@ output de imc*/
 
 CalculoImc() {
   print("Informe seu Peso: ");
-  var textPeso = stdin.readLineSync();
-  var peso = int.parse(textPeso!);
+  String? textPeso = stdin.readLineSync();
+  int peso = int.parse(textPeso!);
   print("Informe sua altura: ");
-  var textAlt = stdin.readLineSync();
-  var altura = double.parse(textAlt!);
-  var calc = peso / (altura * altura);
+  String? textAlt = stdin.readLineSync();
+  double altura = double.parse(textAlt!);
+  double calc = peso / (altura * altura);
 
   imprimirResultado(calc);
 }
 
-imprimirResultado(calc) {
+imprimirResultado(double calc) {
   if (calc < 18.5) {
     print("você está Magro, seu Imc é: ");
     print(calc);
