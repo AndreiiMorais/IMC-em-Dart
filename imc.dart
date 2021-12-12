@@ -6,6 +6,7 @@ imput de peso
 realizar calculo do imc
 output de imc*/
   calculoImc();
+  /*aqui o main chama a funçao calculoImc, essa pega os parametros de imput e passa para a funçao calculo, que retorna o valor do imc para a variavel calc, entao  funçao calculoImc passa o valor de calc para a funçao imprimirResultado, que exibe ao usuario*/
 }
 
 calculoImc() {
