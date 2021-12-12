@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'dart:io';
 
 main() {
@@ -5,6 +6,9 @@ main() {
 imput de peso
 realizar calculo do imc
 output de imc*/
+}
+
+CalculoImc() {
   print("Informe seu Peso: ");
   var textPeso = stdin.readLineSync();
   var peso = int.parse(textPeso!);
@@ -13,6 +17,10 @@ output de imc*/
   var altura = double.parse(textAlt!);
   var calc = peso / (altura * altura);
 
+  imprimirResultado(calc);
+}
+
+imprimirResultado(calc) {
   if (calc < 18.5) {
     print("você está Magro, seu Imc é: ");
     print(calc);
